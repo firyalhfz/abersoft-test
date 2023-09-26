@@ -18,7 +18,7 @@ export default function AboutUs() {
         <div className="w-1/2 flex justify-center">
           <div style={{ marginRight: "-500px", overflow: "hidden" }}>
             <Image
-              src={require("@/assets/team.png")}
+              src={require("@/assets/img-team.png")}
               alt="image"
               width="800"
               height="500"
