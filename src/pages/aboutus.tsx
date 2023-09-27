@@ -10,7 +10,7 @@ export default function AboutUs() {
           <Image
             src={require("@/assets/team.png")}
             alt="image"
-            width="800"
+            width="400"
             height="500"
           />
         </div>
@@ -45,7 +45,7 @@ export default function AboutUs() {
             height="50"
           />
         </div>
-        <h1 className="font-bold tracking-normal leading-normal text-white text-3xl md:text-5xl align-center text-center">
+        <h1 className="font-bold tracking-normal leading-relaxed md:leading-relaxed text-white text-3xl md:text-5xl align-center text-center">
           Creating software <br /> is not our work, <br />
           it is our passion.
         </h1>
@@ -95,12 +95,12 @@ export default function AboutUs() {
       </div>
 
       <div className="grid w-full h-[640px] min-h-full items-center z-10 bg-primary justify-center">
-        <h1 className="font-bold tracking-normal leading-normal text-white text-3xl md:text-5xl align-center text-center">
+        <h1 className="font-bold tracking-normal leading-relaxed md:leading-relaxed text-white text-3xl md:text-5xl align-center text-center">
           Abersoft, <br /> more than just <br /> a software house.
         </h1>
       </div>
 
-      <div className="grid h-screen grid-row lg:grid-cols-2 xs:mx-12 md:mx-36 items-center -z-10 ">
+      <div className="grid sm:h-screen grid-row lg:grid-cols-2 xs:mx-12 md:mx-36 items-center -z-10 ">
         <div
           className="lg:hidden flex justify-center z-0 xs:mt-20"
           // style={{
@@ -148,73 +148,9 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="xs:mx-6 md:mx-32 lg:mx-28">
+      <div className="xs:mx-6 md:mx-32 lg:mx-28 xs:mt-30">
         <ContactUs />
       </div>
-      {/* <div className="flex mt-60 mx-44 mb-12">
-        <div className="w-1/2 ml-2">
-          <h1 className="font-bold tracking-tight text-primary sm:text-5xl">
-            Contact Us.
-          </h1>
-          <h1 className="font-light tracking-tight text-gray-900 sm:text-2xl mt-4">
-            We know that it sometimes can be hard to know where to start. Let’s
-            chat and see if we can help you!
-          </h1>
-          <div className="flex justify-between w-2/4 mt-40">
-            <Image
-              src={require("@/assets/icon-fb.png")}
-              alt="img-fb"
-              width="50"
-              height="50"
-            />
-            <Image
-              src={require("@/assets/icon-ig.png")}
-              alt="img-ig"
-              width="50"
-              height="50"
-            />
-            <Image
-              src={require("@/assets/icon-linkedin.png")}
-              alt="img-linkedin"
-              width="50"
-              height="50"
-            />
-          </div>
-        </div>
-        <div className="flex w-1/2 ml-20 mr-3">
-          <div className="w-full">
-            <div className=" bg-[#F6F6F9] rounded-full p-4">
-              <input
-                type="text"
-                className="w-full h-full bg-transparent focus:outline-none"
-                placeholder="Name"
-              />
-            </div>
-            <div className="mt-8 bg-[#F6F6F9] rounded-full p-4">
-              <input
-                type="text"
-                className="w-full h-full bg-transparent focus:outline-none"
-                placeholder="Email"
-              />
-            </div>
-            <div className="mt-8 bg-[#F6F6F9] rounded-[29px] p-4">
-              <textarea
-                rows={6}
-                className="w-full h-full bg-transparent focus:outline-none"
-                placeholder="Message"
-              />
-            </div>
-            <div className="flex justify-end">
-              <button
-                type="submit"
-                className="flex mt-8 h-[50px] justify-end items-center w-1/3 rounded-full justify-center bg-primary px-3 py-1.5 text-lg font-light leading-6 text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:secondary"
-              >
-                Send
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import React from "react";
 export default function Contacts() {
   return (
     <div>
-      <div className="flex h-[644px] min-h-full ml-44 mr-44 justify-center items-center text-center">
+      <div className="w-full flex h-screen min-h-full justify-center items-center text-center">
         <div>
           <h1 className="font-bold text-primary sm:text-[32px] mb-0 ">
             On Progress...
