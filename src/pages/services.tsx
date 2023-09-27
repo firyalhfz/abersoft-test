@@ -32,7 +32,7 @@ export default function Services() {
 
   return (
     <div className="mx-6 md:mx-36">
-      <div className="flex flex-col lg:flex-row items-center mt-24 xs:px-9">
+      <div className="flex flex-col lg:flex-row items-center mt-24 xs:px-8">
         <div className="lg:hidden w-1/2 xs:flex justify-center">
           <Image
             src={require("@/assets/jelly-bear.png")}
@@ -60,7 +60,7 @@ export default function Services() {
           />
         </div>
       </div>
-      <div className="grid grid-row lg:grid-cols-2 ml-2 mt-40 mr-4 xs:w-full">
+      <div className="grid grid-row lg:grid-cols-2 mt-40 xs:w-full">
         {dataCategories.map((item) => {
           return (
             <div key={item.title} className="lg:mx-8 xs:mx-8 mt-10">
