@@ -148,7 +148,7 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="xs:mx-6 md:mx-28 lg:mx-28 xs:mt-30">
+      <div className="xs:mx-6 md:mx-28  lg:mx-28 xs:mt-30">
         <ContactUs />
       </div>
     </div>
