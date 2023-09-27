@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ContactUs() {
   return (
-    <div className="lg:flex mt-32 lg:mx-10 xs:mx-7 md:mx-4 mb-12">
+    <div className="lg:flex mt-32 lg:mx-10 xs:mx-7 md:mx-8 mb-12">
       <div className="w-full lg:w-1/2">
         <h1 className="font-bold text-primary text-3xl md:text-5xl ">
           Contact Us.
