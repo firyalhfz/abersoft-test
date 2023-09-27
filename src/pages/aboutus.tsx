@@ -1,12 +1,21 @@
+import ContactUs from "@/components/ContactUs";
 import Image from "next/image";
 import React from "react";
 
 export default function AboutUs() {
   return (
     <div>
-      <div className="flex items-center mt-24 mx-36">
-        <div className="w-1/2 ml-10">
-          <h1 className="font-bold tracking-normal leading-normal text-cgrey text-5xl">
+      <div className="flex flex-col lg:flex-row place-content-center items-center md:mx-36 xs:mx-12 xs:h-screen">
+        <div className="lg:hidden xs:w-full flex justify-center">
+          <Image
+            src={require("@/assets/team.png")}
+            alt="image"
+            width="800"
+            height="500"
+          />
+        </div>
+        <div className="xs:w-full lg:w-1/2 lg:ml-10 grid place-content-center ">
+          <h1 className="font-bold tracking-normal md:leading-normal text-cgrey text-3xl md:text-5xl xs:mt-[30px] md:mt-0">
             Who are we? <br /> We are{" "}
             <span className="text-primary">Abersoft..</span>
           </h1>
@@ -15,18 +24,19 @@ export default function AboutUs() {
             will create the solution you need.
           </h1>
         </div>
-        <div className="w-1/2 flex justify-center">
-          <div style={{ marginRight: "-500px", overflow: "hidden" }}>
-            <Image
-              src={require("@/assets/img-team.png")}
-              alt="image"
-              width="800"
-              height="500"
-            />
-          </div>
+        <div className="xs:hidden lg:w-1/2 lg:flex justify-center lg:ml-24">
+          {/* <div style={{ marginRight: "-500px", overflow: "hidden" }}> */}
+          <Image
+            src={require("@/assets/team.png")}
+            alt="image"
+            width="800"
+            height="500"
+          />
+          {/* </div> */}
         </div>
       </div>
-      <div className="grid w-full h-[640px] min-h-full box-content items-center mt-24 bg-primary justify-center">
+
+      <div className="grid w-full h-[640px] min-h-full box-content items-center bg-primary justify-center">
         <div className="grid justify-center mt-[123px]">
           <Image
             src={require("@/assets/icon-quote-right.png")}
@@ -35,7 +45,7 @@ export default function AboutUs() {
             height="50"
           />
         </div>
-        <h1 className="font-bold tracking-normal leading-normal text-white text-5xl align-center text-center">
+        <h1 className="font-bold tracking-normal leading-normal text-white text-3xl md:text-5xl align-center text-center">
           Creating software <br /> is not our work, <br />
           it is our passion.
         </h1>
@@ -48,12 +58,13 @@ export default function AboutUs() {
           />
         </div>
       </div>
-      <div className="grid h-[644px] min-h-full grid-cols-2 ml-44 mr-4 items-center -z-10">
-        <div className="mt-4 ml-1 pr-20">
-          <h1 className="font-bold text-primary sm:text-[32px] ">
+
+      <div className="grid lg:h-[640px] min-h-full grid-row lg:grid-cols-2 xs:mx-12 md:mx-36 items-center">
+        <div className="lg:mt-4 xs:mt-20 ml-1 xs:pr-0 lg:pr-20 ">
+          <h1 className="font-bold text-primary text-2xl md:text-4xl ">
             Our philosophy.
           </h1>
-          <h1 className="font-bold text-gray-500 sm:text-[16px] mt-2">
+          <h1 className="font-bold text-gray-500 text-1xl mt-2">
             Our mission is to make our clients life as smooth and problem free
             as possible and deliver top products.
           </h1>
@@ -69,10 +80,10 @@ export default function AboutUs() {
         </div>
         <div
           className="flex justify-center z-0"
-          style={{
-            marginTop: "180px",
-            overflow: "hidden",
-          }}
+          // style={{
+          //   marginTop: "180px",
+          //   overflow: "hidden",
+          // }}
         >
           <Image
             src={require("@/assets/img-hand.png")}
@@ -82,14 +93,30 @@ export default function AboutUs() {
           />
         </div>
       </div>
+
       <div className="grid w-full h-[640px] min-h-full items-center z-10 bg-primary justify-center">
-        <h1 className="font-bold tracking-normal leading-normal text-white text-5xl align-center text-center">
+        <h1 className="font-bold tracking-normal leading-normal text-white text-3xl md:text-5xl align-center text-center">
           Abersoft, <br /> more than just <br /> a software house.
         </h1>
       </div>
-      <div className="grid h-[644px] min-h-full grid-cols-2 ml-44 mr-4 items-center -z-10">
-        <div className="mt-4 ml-1 pr-20">
-          <h1 className="font-bold text-primary sm:text-[32px] ">
+
+      <div className="grid h-screen grid-row lg:grid-cols-2 xs:mx-12 md:mx-36 items-center -z-10">
+        <div
+          className="lg:hidden flex justify-center z-0"
+          style={{
+            marginTop: "180px",
+            overflow: "hidden",
+          }}
+        >
+          <Image
+            src={require("@/assets/img-gamestudio.png")}
+            alt="image"
+            width="700"
+            height="500"
+          />
+        </div>
+        <div className="mt-4 ml-1 lg:pr-20">
+          <h1 className="font-bold text-primary  text-2xl md:text-4xl ">
             Game Studio & Inhouse Apps.{" "}
           </h1>
           <h1 className="font-light text-c-gey sm:text-[16px] mt-2">
@@ -106,7 +133,7 @@ export default function AboutUs() {
           </h1>
         </div>
         <div
-          className="flex justify-center z-0"
+          className="xs:hidden lg:flex lg:justify-center z-0"
           style={{
             marginTop: "180px",
             overflow: "hidden",
@@ -120,7 +147,11 @@ export default function AboutUs() {
           />
         </div>
       </div>
-      <div className="flex mt-60 mx-44 mb-12">
+
+      <div className="xs:mx-6 md:mx-32 lg:mx-28">
+        <ContactUs />
+      </div>
+      {/* <div className="flex mt-60 mx-44 mb-12">
         <div className="w-1/2 ml-2">
           <h1 className="font-bold tracking-tight text-primary sm:text-5xl">
             Contact Us.
@@ -183,7 +214,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

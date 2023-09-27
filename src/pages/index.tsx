@@ -1,3 +1,4 @@
+import ContactUs from "@/components/ContactUs";
 import Image from "next/image";
 
 export default function Home() {
@@ -35,35 +36,38 @@ export default function Home() {
   ];
 
   return (
-    <div className="mx-36">
-      <div className="flex my-36">
-        <div className="w-1/2 ml-9">
-          <h1 className="font-bold tracking-normal leading-normal text-primary text-5xl">
+    <section className="mx-6 md:mx-36">
+      <div className="flex w-full flex-col lg:flex-row my-6 lg:mt-36 xl:mt-60 xl:mb-32 xs:px-8">
+        <div className="lg:hidden mt-6 mb-10">
+          <Image
+            className="h-auto sm:ml-12 relative"
+            src={require("@/assets/image_phone.png")}
+            alt="img_phone"
+            width="0"
+            height="0"
+          />
+        </div>
+        <div className="lg:w-1/2 lg:ml-9 lg:ml-24 grid place-content-center">
+          <h1 className="font-bold tracking-normal md:leading-normal text-primary text-3xl md:text-5xl">
             We help you build the tech solutions of the future.
           </h1>
-          <h1 className="font-light leading-normal text-cgrey text-2xl mt-4">
+          <h1 className="font-light leading-normal text-cgrey text-lg md:text-2xl mt-4">
             When you need help with development or design we are here to create
             the best solutions for you. With over a decade of experience in
             software development.
           </h1>
         </div>
-        <div className="absolute mr-10 right-0">
-          <div
-            style={{
-              overflow: "hidden",
-              marginLeft: "-80px",
-            }}
-          >
-            <Image
-              src={require("@/assets/image_phone.png")}
-              alt="image"
-              width="900"
-              height="500"
-            />
-          </div>
+        <div className="hidden lg:flex lg:absolute lg:right-10 lg:top-52 xl:top-60">
+          <Image
+            src={require("@/assets/image_phone.png")}
+            alt="image"
+            width="800"
+            height="500"
+          />
         </div>
       </div>
-      <div className="grid grid-cols-3 ml-4 mt-72">
+
+      <div className="grid grid-row lg:grid-cols-3 md:grid-cols-2 lg:ml-4 mt-36 xl:mt-60">
         {dataCategories.map((item) => {
           return (
             <div key={item.title} className="mx-7 my-10">
@@ -71,79 +75,17 @@ export default function Home() {
                 <Image src={item.img} alt="image" width="300" height="300" />
               </div>
               <div className="mt-4">
-                <h1 className="font-bold text-primary sm:text-3xl ">
+                <h1 className="font-bold text-primary text-2xl ">
                   {item.title}
                 </h1>
-                <h1 className="font-light text-cgrey sm:text-1xl mt-2">
-                  {item.desc}
-                </h1>
+                <h1 className="text-cgrey xs:text-1xl mt-2">{item.desc}</h1>
               </div>
             </div>
           );
         })}
       </div>
-      <div className="flex mt-60 mx-9 mb-12">
-        <div className="w-1/2">
-          <h1 className="font-bold text-primary sm:text-5xl">Contact Us.</h1>
-          <h1 className="font-light text-cgrey sm:text-2xl mt-4">
-            We know that it sometimes can be hard to know where to start. Let’s
-            chat and see if we can help you!
-          </h1>
-          <div className="flex justify-between w-2/4 mt-40">
-            <Image
-              src={require("@/assets/icon-fb.png")}
-              alt="img-fb"
-              width="50"
-              height="50"
-            />
-            <Image
-              src={require("@/assets/icon-ig.png")}
-              alt="img-ig"
-              width="50"
-              height="50"
-            />
-            <Image
-              src={require("@/assets/icon-linkedin.png")}
-              alt="img-linkedin"
-              width="50"
-              height="50"
-            />
-          </div>
-        </div>
-        <div className="flex w-1/2 ml-20">
-          <div className="w-full">
-            <div className=" bg-[#F6F6F9] rounded-full p-4">
-              <input
-                type="text"
-                className="w-full h-full bg-transparent focus:outline-none"
-                placeholder="Name"
-              />
-            </div>
-            <div className="mt-8 bg-[#F6F6F9] rounded-full p-4">
-              <input
-                type="text"
-                className="w-full h-full bg-transparent focus:outline-none"
-                placeholder="Email"
-              />
-            </div>
-            <div className="mt-8 bg-[#F6F6F9] rounded-[29px] p-4">
-              <textarea
-                rows={6}
-                className="w-full h-full bg-transparent focus:outline-none"
-                placeholder="Message"
-              />
-            </div>
-            <div className="flex justify-end">
-              <button
-                type="submit"
-                className="flex mt-8 h-[50px] justify-end items-center w-1/3 rounded-full justify-center bg-primary px-3 py-1.5 text-lg font-light leading-6 text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:secondary"
-              >
-                Send
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+      <ContactUs />
+    </section>
   );
 }
