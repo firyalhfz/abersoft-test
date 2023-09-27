@@ -100,13 +100,13 @@ export default function AboutUs() {
         </h1>
       </div>
 
-      <div className="grid h-screen grid-row lg:grid-cols-2 xs:mx-12 md:mx-36 items-center -z-10">
+      <div className="grid h-screen grid-row lg:grid-cols-2 xs:mx-12 md:mx-36 items-center -z-10 ">
         <div
-          className="lg:hidden flex justify-center z-0"
-          style={{
-            marginTop: "180px",
-            overflow: "hidden",
-          }}
+          className="lg:hidden flex justify-center z-0 xs:mt-20"
+          // style={{
+          //   marginTop: "180px",
+          //   overflow: "hidden",
+          // }}
         >
           <Image
             src={require("@/assets/img-gamestudio.png")}
@@ -116,7 +116,7 @@ export default function AboutUs() {
           />
         </div>
         <div className="mt-4 ml-1 lg:pr-20">
-          <h1 className="font-bold text-primary  text-2xl md:text-4xl ">
+          <h1 className="font-bold text-primary text-2xl md:text-4xl ">
             Game Studio & Inhouse Apps.{" "}
           </h1>
           <h1 className="font-light text-c-gey sm:text-[16px] mt-2">

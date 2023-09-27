@@ -32,7 +32,7 @@ export default function Services() {
 
   return (
     <div className="mx-6 md:mx-36">
-      <div className="flex flex-col lg:flex-row items-center mt-24">
+      <div className="flex flex-col lg:flex-row items-center mt-24 xs:px-9">
         <div className="lg:hidden w-1/2 xs:flex justify-center">
           <Image
             src={require("@/assets/jelly-bear.png")}
@@ -41,7 +41,7 @@ export default function Services() {
             height="500"
           />
         </div>
-        <div className="xs:w-full lg:w-1/2 ml-10">
+        <div className="xs:w-full lg:w-1/2">
           <h1 className="font-bold tracking-normal md:leading-normal text-primary text-3xl md:text-5xl mt-10 lg:mt-0">
             We make your ideas become
             <span className="text-cgrey"> reality.</span>
@@ -63,7 +63,7 @@ export default function Services() {
       <div className="grid grid-row lg:grid-cols-2 ml-2 mt-40 mr-4 xs:w-full">
         {dataCategories.map((item) => {
           return (
-            <div key={item.title} className="lg:mx-8 xs:mx-2 mt-10">
+            <div key={item.title} className="lg:mx-8 xs:mx-8 mt-10">
               <div className="flex justify-center"></div>
               <div className="mt-4">
                 <h1 className="font-bold text-primary text-2xl md:text-3xl ">
