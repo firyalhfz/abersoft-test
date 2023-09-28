@@ -33,7 +33,10 @@ export default function Services() {
   return (
     <div className="mx-6 md:mx-36">
       <div className="flex flex-col lg:flex-row items-center mt-24 xs:px-8">
-        <div className="lg:hidden w-1/2 xs:flex justify-center">
+        <div
+          data-aos="zoom-in"
+          className="lg:hidden w-1/2 xs:flex justify-center"
+        >
           <Image
             src={require("@/assets/jelly-bear.png")}
             alt="image"
@@ -41,17 +44,27 @@ export default function Services() {
             height="500"
           />
         </div>
+
         <div className="xs:w-full lg:w-1/2">
-          <h1 className="font-bold tracking-normal md:leading-normal text-primary text-3xl md:text-5xl mt-10 lg:mt-0">
+          <h1
+            data-aos="zoom-in"
+            className="font-bold tracking-normal md:leading-normal text-primary text-3xl md:text-5xl mt-10 lg:mt-0"
+          >
             We make your ideas become
             <span className="text-cgrey"> reality.</span>
           </h1>
-          <h1 className="font-light tracking-tight text-cgrey text-lg md:text-2xl mt-4">
+          <h1
+            data-aos="zoom-in"
+            className="font-light tracking-tight text-cgrey text-lg md:text-2xl mt-4"
+          >
             Whether or not you are an established company or a new start up, we
             will create the solution you need.
           </h1>
         </div>
-        <div className="xs:hidden w-1/2 lg:flex justify-center">
+        <div
+          data-aos="fade-left"
+          className="xs:hidden w-1/2 lg:flex justify-center"
+        >
           <Image
             src={require("@/assets/jelly-bear.png")}
             alt="image"
@@ -64,15 +77,23 @@ export default function Services() {
         {dataCategories.map((item) => {
           return (
             <div key={item.title} className="lg:mx-8 xs:mx-8 mt-10">
-              <div className="flex justify-center"></div>
               <div className="mt-4">
-                <h1 className="font-bold text-primary text-2xl md:text-3xl ">
+                <h1
+                  data-aos="fade-up"
+                  className="font-bold text-primary text-2xl md:text-3xl "
+                >
                   {item.title}
                 </h1>
-                <h1 className="font-bold text-gray-500 sm:text-1xl mt-2">
+                <h1
+                  data-aos="fade-up"
+                  className="font-bold text-gray-500 sm:text-1xl mt-2"
+                >
                   {item.desc}
                 </h1>
-                <h1 className="font-light text-cgrey sm:text-1xl mt-2">
+                <h1
+                  data-aos="fade-up"
+                  className="font-light text-cgrey sm:text-1xl mt-2"
+                >
                   {item.content}
                 </h1>
               </div>

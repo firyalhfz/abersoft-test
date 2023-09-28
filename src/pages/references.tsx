@@ -4,7 +4,7 @@ export default function References() {
   return (
     <div>
       <div className="w-full flex h-screen min-h-full justify-center items-center text-center">
-        <div>
+        <div data-aos="zoom-in">
           <h1 className="font-bold text-primary sm:text-[32px] mb-0 ">
             On Progress...
           </h1>

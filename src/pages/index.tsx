@@ -34,11 +34,11 @@ export default function Home() {
       img: require("@/assets/img-soft-sys.png"),
     },
   ];
-
+  // xl:mt-60 xl:mb-32
   return (
     <section className="mx-6 md:mx-36">
-      <div className="flex w-full flex-col lg:flex-row my-6 lg:mt-36 xl:mt-60 xl:mb-32 xs:px-8">
-        <div className="lg:hidden mt-6 mb-10">
+      <div className="flex w-full flex-col lg:flex-row my-6 mt-24 xl:mt-44 xs:px-8 ">
+        <div className="lg:hidden mt-6 mb-10" data-aos="fade-up">
           <Image
             className="h-auto sm:ml-12 relative"
             src={require("@/assets/image_phone.png")}
@@ -48,16 +48,25 @@ export default function Home() {
           />
         </div>
         <div className="lg:w-1/2 lg:ml-9 lg:ml-24 grid place-content-center">
-          <h1 className="font-bold tracking-normal md:leading-normal text-primary text-3xl md:text-5xl">
+          <h1
+            data-aos="zoom-in"
+            className="font-bold tracking-normal md:leading-normal text-primary text-3xl md:text-5xl"
+          >
             We help you build the tech solutions of the future.
           </h1>
-          <h1 className="font-light leading-normal text-cgrey text-lg md:text-2xl mt-4">
+          <h1
+            data-aos="zoom-in"
+            className="font-light leading-normal text-cgrey text-lg md:text-2xl mt-4"
+          >
             When you need help with development or design we are here to create
             the best solutions for you. With over a decade of experience in
             software development.
           </h1>
         </div>
-        <div className="hidden lg:flex lg:absolute lg:right-10 lg:top-52 xl:top-60">
+        <div
+          data-aos="fade-left"
+          className="hidden lg:flex lg:absolute lg:right-10 lg:top-52 xl:top-60"
+        >
           <Image
             src={require("@/assets/image_phone.png")}
             alt="image"
@@ -71,14 +80,16 @@ export default function Home() {
         {dataCategories.map((item) => {
           return (
             <div key={item.title} className="mx-7 my-10">
-              <div className="flex justify-center">
+              <div className="flex justify-center" data-aos="fade-up">
                 <Image src={item.img} alt="image" width="300" height="300" />
               </div>
-              <div className="mt-4">
+              <div className="mt-4" data-aos="fade-up">
                 <h1 className="font-bold text-primary text-2xl ">
                   {item.title}
                 </h1>
-                <h1 className="text-cgrey xs:text-1xl mt-2">{item.desc}</h1>
+                <h1 data-aos="fade-up" className="text-cgrey xs:text-1xl mt-2">
+                  {item.desc}
+                </h1>
               </div>
             </div>
           );

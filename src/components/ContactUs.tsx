@@ -4,7 +4,7 @@ import React from "react";
 export default function ContactUs() {
   return (
     <div className="lg:flex mt-32 lg:mx-10 xs:mx-7 md:mx-8 mb-12">
-      <div className="w-full lg:w-1/2">
+      <div data-aos="zoom-in" className="w-full lg:w-1/2">
         <h1 className="font-bold text-primary text-3xl md:text-5xl ">
           Contact Us.
         </h1>
@@ -12,7 +12,10 @@ export default function ContactUs() {
           We know that it sometimes can be hard to know where to start. Let’s
           chat and see if we can help you!
         </h1>
-        <div className="hidden lg:flex lg:justify-between lg:w-2/4 lg:mt-40">
+        <div
+          data-aos="fade-right"
+          className="hidden lg:flex lg:justify-between lg:w-2/4 lg:mt-40"
+        >
           <Image
             src={require("@/assets/icon-fb.png")}
             alt="img-fb"
@@ -34,7 +37,7 @@ export default function ContactUs() {
         </div>
       </div>
       <div className="flex w-full lg:w-1/2 lg:ml-20 lg:mt-0 xs:mt-10">
-        <div className="w-full">
+        <div data-aos="fade-up" className="w-full">
           <div className=" bg-[#F6F6F9] rounded-full p-4">
             <input
               type="text"
@@ -66,7 +69,10 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-      <div className="lg:hidden flex justify-between md:justify-around xs:mt-20">
+      <div
+        data-aos="fade-up"
+        className="lg:hidden flex justify-between md:justify-around xs:mt-20"
+      >
         <Image
           src={require("@/assets/icon-fb.png")}
           alt="img-fb"

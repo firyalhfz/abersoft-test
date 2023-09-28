@@ -8,7 +8,7 @@ export default function Navigation() {
 
   const handleLinkClick = (index: number) => {
     setActiveLink(index);
-    setIsOpen(false); // Close the mobile menu when a link is clicked
+    setIsOpen(false);
   };
 
   const dataNav = [
@@ -38,7 +38,7 @@ export default function Navigation() {
     <header className="bg-white sticky top-0 z-50">
       <nav className="mx-auto flex max-w-7xl items-center justify-center p-6 lg:px-8 mt-6">
         {/* Mobile Menu Button */}
-        <div className="lg:hidden right-10 absolute">
+        <div className="md:hidden right-10 absolute">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-cgrey focus:text-primary focus:outline-none"
@@ -63,7 +63,7 @@ export default function Navigation() {
         </div>
 
         {/* Desktop Navigation */}
-        <Popover.Group className="hidden lg:flex items-center lg:gap-x-40 ">
+        <Popover.Group className="hidden md:flex items-center lg:gap-x-40 md:gap-x-16">
           {dataNav.map((item, index) => {
             return (
               <Link
